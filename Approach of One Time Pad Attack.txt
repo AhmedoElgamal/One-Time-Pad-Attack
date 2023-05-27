@@ -1,0 +1,24 @@
+My approach for the One Time Pad problem:
+-----------------------------------------
+
+I made every cipher text XORed with each of the 3 Cipher texts below it XORed with space, 
+so we can get the spaces in the first original message in the form of alphabets.
+
+Whenever there is an alphabet in the a spot and alphabet in the below XORed texts in the same spot,
+that means there is a space in that spot in the first message,
+
+if we XORed C1 with C2 with Space --> Thats 1 line
+same with C1 xor C3 with space --> Thats another 1 line
+
+and in a certain spot in both lines there is an alphabet let's say 'r'in the first line and 'u' in the second line.
+then m1 has a space , m2 has letter 'r' in the same spot and m3 has 'u' in the same spot.
+
+I also made a function to get the key so if there are alphabets in all the XORed lines in the same spot,
+we XOR the first cipher text with space so that we get the key in that exact spot and use it later to reveal the other lines' alphabets 
+in that spot.
+
+At the end, I got most of the alphabets revealed except some which are by default set to '#' symbol (my choice)
+I guessed the words and knew the sentences then wrote it in the console log below the semi-revealed sentences.
+
+This is why we shall never use the same key for One Time Pad messages, Its called One Time for a reason.
+
